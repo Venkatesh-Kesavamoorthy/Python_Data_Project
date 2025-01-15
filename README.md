@@ -20,11 +20,17 @@ Below are the questions I want to answer in my project:
 For my deep dive into the data analyst job market, I harnessed the power of several key tools:
 
     - Python: The backbone of my analysis, allowing me to find the data and find critical insights. I also used the following python libraries:
+
             - Pandas Library: This was used to analyze the data.
+
             - Matplotlib Library: I Visualized the data.
+
             - seaborn Library: Helped me create more advanced visuals.
+
     - Jupyter Notebooks: The tool I used to run my Python scripts which let me easily include my notes and analysis.
+
     - Visula Studio Code: My go-to for executing my python scripts.
+
     - Git & GitHub: Essential version control and sharing my Python code and analysis.
 
 # Data Preparation and cleanup
@@ -90,7 +96,7 @@ Excel:
 To analyse the top 5 trending skills of Data Analyst in Singapore which were filtered through the month in dataframe.
 Using the explode method which converted the job_skills into list that helped to seperate the data, and assigned the data to the index values. Finally we got the top 5 trending skills of Data Analyst role.
 
-view my notebook to see my detailed steps here: [3_trending_skills](3_project/3_trending_skills.ipynb)
+view my notebook to see my detailed steps here: [3_trending_skills.ipynb](3_project/3_trending_skills.ipynb)
 
 ### Visualize Data
 
@@ -143,11 +149,70 @@ R (21%)
 
 ## 3. What are the optimal skills for data analysis to learn? (High Demand and High Paying)
 
+Analysing the top skills which are greater than 8% of the skill_percent of data analyst roles in Singapore with the help of pandas, which segregates the job_skills count value and compares it with a total number of job_skills count value so that we get the percentage (doing mathematical operations). Then, we plot the skills on the graph according to their related field using the for loop in the dictionary method. Finally, we get the percentage of top skills greater than 8% for data analyst roles in Singapore.
+
+View my notebook to see the detailed steps here: [5_optimal_skills.ipynb](3_project/5_optimal_skills.ipynb)
+
+### Visualize Data
+
+```python from adjustText import adjust_text
+
+# fig, ax = plt.subplots()
 
 
+df_da_skills_high_demand.plot(kind= 'scatter', x= 'skill_percent', y='median_salary')
 
+texts = []
+for i, txt in enumerate(df_da_skills_high_demand.index):
+    texts.append(plt.text(df_da_skills_high_demand['skill_percent'].iloc[i],df_da_skills_high_demand['median_salary'].iloc[i], txt))
+    
+
+plt.xlabel('Percent of Data Analysts Jobs')
+plt.ylabel('Median Yearly Salary')
+plt.title('Most Optimal Skills for Data Analysts in the Sg')
+plt.tight_layout()
+plt.xlim(0,60)
+
+from matplotlib.ticker import PercentFormatter
+ax = plt.gca()
+ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda y, post: f'${int(y/1000)}k'))
+ax.xaxis.set_major_formatter(PercentFormatter(decimals=0))
+```
+### Results
+![Visualizaion of Optimal Skills for Data Analyst roles in Singapore](3_project/images/optimal_skills.png)
+
+# Insights
+
+- SQL is the most in-demand skill, appearing in 57% of job postings with a median yearly salary of approximately $100k.
+- Python is the second most sought-after skill, featured in 43% of job listings, with a median salary close to $105k.
+- Tableau and Excel have significant demand at 32% and 29%, respectively, with median salaries around $100k.
+- AWS (18%) and R (21%) are moderately demanded skills, offering median salaries slightly above $100k.
+- Spark offers the highest median salary of approximately $150k, but it's only required in 18% of job postings.
+- Hadoop and Flow have lower demand (11%) but offer salaries around $80k–$110k.
+- Power BI is required in 14% of jobs, with a median salary close to $90k.
+
+These insights suggest a strong emphasis on SQL and Python for data analysts, with specialized skills like Spark leading to higher salaries despite lower demand.
 
 # Final Insights 
 
 This project provided several general insights into the data job market for analysis:
+
+    - skill Demand and Salary Correlation : There is a clear correlation between the demand for the specific skills and the salaries these skills command. Advanced and specialized skills like Python and Oracle often lead to higher salaries.
+
+    - Market Trends: There are changing trends in skill demand, highlighting the dynamic nature of the data job market. Keeping up with these trends is essential for career growth in data analytics.
+
+    - Economic Value of Skills: Understanding which skills are voth in-demand and well-compensated can guide data analysts in prioritizing learning to maximize their economic returns.
+
+ # Challenges I Faced
+
+ This project was not without its challenges, but it provided good learning oppurtunities:
+
+ - Data Inconsistencies: Handling missing or inconsistent data entries requires careful consideraton and thorough search it requires techniques to ensure the integrity of the data analysis/
+
+ - Complex Data Visualization: Designing effective visual representation of complex datasets was challenging, but the use of Python libraries which conveying insights clearly and compellingly.
+
+# Conclusion
+
+This exploration into the data analyst job market has veen incredibly informative, highlighting the critcal skills and trends that shape this evolving field. The insights I got enhance my understanding and provide actionable guidance for anyone looking to advance their career in data analytics. As the market continues to change, ongoing analysis will be essential to stay ahead in data analytics. This project is a food foundation for future explorations and underscores the importance of continuous learning and adaptation in the data field.
+
 
