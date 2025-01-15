@@ -1,3 +1,40 @@
+# Introduction
+
+Welcome to my analysis of the data job market, focusing on Data Analyst roles in Singapore. This project was created out of a desire to navigate and understand the job market more effectively. It explores into the top-paying and in-demand skills to help find optimal job oppurtunities for data analysts.
+
+The data sourced from (Luke Barousse's python course
+) which provides a foundation for my analysis, containing detailed information on job titles, salaries, locations, and essential skills. Through a series of python scripts, I explore key questions such as the most demanded skills, and the intersection of demand and salary in data analytics.
+
+# The Questions
+
+Below are the questions I want to answer in my project:
+
+1. What are the most demanded skills for the top 3 most popular data roles in Singapore?
+
+2. How are in_demand skills trending for Data Analysts?
+
+3. What are the optimal skills for data analysis to learn? (High Demand and High Paying)
+
+# Tools I used 
+
+For my deep dive into the data analyst job market, I harnessed the power of several key tools:
+
+    - Python: The backbone of my analysis, allowing me to find the data and find critical insights. I also used the following python libraries:
+            - Pandas Library: This was used to analyze the data.
+            - Matplotlib Library: I Visualized the data.
+            - seaborn Library: Helped me create more advanced visuals.
+    - Jupyter Notebooks: The tool I used to run my Python scripts which let me easily include my notes and analysis.
+    - Visula Studio Code: My go-to for executing my python scripts.
+    - Git & GitHub: Essential version control and sharing my Python code and analysis.
+
+# Data Preparation and cleanup
+
+This section outlines the steps taken to prepare the data for analysis, ensuring accuracy and usability.
+
+### Import & Clean Up Data
+
+I start by improting necessary libraries and loading the dataset. followed by initial data cleaning task to ensure data.
+
 # The Analysis
 
 ## 1. What are the most demanded skills for the top 3 most popular data roles in Singapore?
@@ -53,7 +90,7 @@ Excel:
 To analyse the top 5 trending skills of Data Analyst in Singapore which were filtered through the month in dataframe.
 Using the explode method which converted the job_skills into list that helped to seperate the data, and assigned the data to the index values. Finally we got the top 5 trending skills of Data Analyst role.
 
-view my notebook to see my detailed steps here:[3_trending_skills](3_project/3_trending_skills.ipynb)
+view my notebook to see my detailed steps here: [3_trending_skills](3_project/3_trending_skills.ipynb)
 
 ### Visualize Data
 
@@ -101,4 +138,16 @@ R (21%)
 - Least demanded skill among the listed ones.
 - Demand remains stable with minimal variation.
 - Primarily used for statistical analysis and niche modeling tasks.
+
+# The Analysis
+
+## 3. What are the optimal skills for data analysis to learn? (High Demand and High Paying)
+
+
+
+
+
+# Final Insights 
+
+This project provided several general insights into the data job market for analysis:
 
