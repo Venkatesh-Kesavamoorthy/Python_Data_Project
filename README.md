@@ -2,8 +2,7 @@
 
 Welcome to my analysis of the data job market, focusing on Data Analyst roles in Singapore. This project was created out of a desire to navigate and understand the job market more effectively. It explores into the top-paying and in-demand skills to help find optimal job oppurtunities for data analysts.
 
-The data sourced from (Luke Barousse's python course
-) which provides a foundation for my analysis, containing detailed information on job titles, salaries, locations, and essential skills. Through a series of python scripts, I explore key questions such as the most demanded skills, and the intersection of demand and salary in data analytics.
+The data sourced from (Luke Barousse's python course) which provides a foundation for my analysis, containing detailed information on job titles, salaries, locations, and essential skills. Through a series of python scripts, I explore key questions such as the most demanded skills, and the intersection of demand and salary in data analytics.
 
 # The Questions
 
